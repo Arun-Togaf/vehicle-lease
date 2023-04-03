@@ -10,5 +10,12 @@ Technologies used:
 
 JUnit tests have been included for all the layers to test the APIs. 
 
-Postman collection can be found at this location: 
+Swagger UI can be accessed at : 
+http://localhost:8080/swagger-ui/index.html#/
+
+Postman collection can be found at this location : 
 https://github.com/Arun-Togaf/vehicle-lease/tree/development/src/test/resources/postman
+
+Actuator endpoints can be accessed at : 
+http://localhost:8080/vehicle-lease-actuator/
+http://localhost:8080/vehicle-lease-actuator/health
