@@ -15,6 +15,8 @@ Steps to run the application
 
 2. Change the datasource properties in application.properties to connect to your MySQL database , 
    I have used the dockerized version of MySQL to build the application
+   
+   spring.jpa.hibernate.ddl-auto has been set to create. This will create a new schema from scratch based on the entities.
 
 3. JUnit tests have been included for all the layers to test the APIs.
    The APIs can be tested by running the JUnit tests present at:
