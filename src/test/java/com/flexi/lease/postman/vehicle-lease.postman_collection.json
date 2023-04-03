@@ -1,0 +1,358 @@
+{
+	"info": {
+		"_postman_id": "f2da7bf1-e4a9-43b6-936f-3a1677065381",
+		"name": "vehicle-lease",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8521940"
+	},
+	"item": [
+		{
+			"name": "getLeasingContracts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/leasing-contracts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"leasing-contracts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getLeasingContractById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/leasing-contracts/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"leasing-contracts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteLeasingContract",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/leasing-contracts/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"leasing-contracts",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createLeasingContract",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"monthlyRate\": 5000,\r\n    \"startDate\": \"2023-04-04\",\r\n    \"endDate\": \"2023-08-08\",\r\n    \"customer\": {\r\n        \"customerId\": 1,\r\n        \"firstName\": \"John\",\r\n        \"lastName\": \"Williams\",\r\n        \"birthdate\": \"2000-02-03\",\r\n        \"contactNumber\" : \"+49 13432378908\",\r\n        \"emailId\" : \"john.williams@gmail.com\"\r\n    },\r\n    \"vehicle\": {\r\n        \"vehicleId\": 1,\r\n        \"brand\": \"Skoda\",\r\n        \"model\": \"Kushaq\",\r\n        \"modelYear\": 2021,\r\n        \"vin\": \"ALBBMW2208\",\r\n        \"price\": 500\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/leasing-contracts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"leasing-contracts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateLeasingContract",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"monthlyRate\": 5000,\r\n    \"startDate\": \"2023-04-04\",\r\n    \"endDate\": \"2023-08-09\",\r\n    \"customer\": {\r\n        \"customerId\": 1,\r\n        \"firstName\": \"John\",\r\n        \"lastName\": \"Williams\",\r\n        \"birthdate\": \"2000-02-03\",\r\n        \"contactNumber\" : \"+49 13432378908\",\r\n        \"emailId\" : \"john.williams@gmail.com\"\r\n    },\r\n    \"vehicle\": {\r\n        \"vehicleId\": 1,\r\n        \"brand\": \"Skoda\",\r\n        \"model\": \"Kushaq\",\r\n        \"modelYear\": 2021,\r\n        \"vin\": \"ALBBMW2208\",\r\n        \"price\": 500\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/leasing-contracts/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"leasing-contracts",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllCustomers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCustomerById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customers/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteCustomer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customers/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addCustomer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"John\",\r\n    \"lastName\": \"Williams\",\r\n    \"birthdate\": \"2000-02-03\",\r\n    \"contactNumber\" : \"+49 13432378908\",\r\n    \"emailId\" : \"john.williams@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editCustomer",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\" : \"Scott\",\r\n    \"lastName\" : \"Tiger\",\r\n    \"birthdate\" : \"2000-02-02\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customers/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllVehicles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/vehicles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vehicles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getVehicleById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/vehicles/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vehicles",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteVehicle",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/vehicles/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vehicles",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addVehicle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"brand\" : \"Skoda\",\r\n    \"model\" : \"Kushaq\",\r\n    \"modelYear\" : 2021,\r\n    \"vin\" : \"ALBBMW2208\",\r\n    \"price\" : 5000\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/vehicles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vehicles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editVehicle",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"brand\" : \"Skoda\",\r\n    \"model\" : \"Kushaq\",\r\n    \"modelYear\" : 2021,\r\n    \"vin\" : \"ALBBMW2208\",\r\n    \"price\" : 1000\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/vehicles/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vehicles",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
