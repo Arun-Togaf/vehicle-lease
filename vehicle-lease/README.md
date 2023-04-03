@@ -8,14 +8,25 @@ Technologies used:
 • MySQL Database - docker
 • Gradle
 
-JUnit tests have been included for all the layers to test the APIs. 
+Steps to run the application
+----------------------------
 
-Swagger UI can be accessed at : 
-http://localhost:8080/swagger-ui/index.html#/
+1. Import the Gradle project in IDE after cloning or downloading the project from https://github.com/Arun-Togaf/vehicle-lease
 
-Postman collection can be found at this location : 
-https://github.com/Arun-Togaf/vehicle-lease/tree/development/src/test/resources/postman
+2. Change the datasource properties in application.properties to connect to your MySQL database , 
+   I have used the dockerized version of MySQL to build the application
 
-Actuator endpoints can be accessed at : 
-http://localhost:8080/vehicle-lease-actuator/
-http://localhost:8080/vehicle-lease-actuator/health
+3. JUnit tests have been included for all the layers to test the APIs.
+   The APIs can be tested by running the JUnit tests present at:
+   https://github.com/Arun-Togaf/vehicle-lease/tree/development/vehicle-lease/src/test/java/com/flexi/lease
+
+4. Swagger UI can be accessed at : 
+   http://localhost:8080/swagger-ui/index.html#/
+
+5. Postman collection with all the endpoints has been created , which can be used to test all the APIs
+   Postman collection can be found at this location :
+   https://github.com/Arun-Togaf/vehicle-lease/tree/development/src/test/resources/postman
+
+6. Actuator endpoints can be accessed at :
+   http://localhost:8080/vehicle-lease-actuator/
+   http://localhost:8080/vehicle-lease-actuator/health
